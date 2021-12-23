@@ -20,6 +20,10 @@ function Banner() {
   }, []);
   console.log(movie);
 
+  function truncate(str, n) {
+    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+  }
+
   return (
     <header
       className="banner"
@@ -39,7 +43,8 @@ function Banner() {
           <div className="banner_button">Play</div>
           <div className="banner_button">My list</div>
         </div>
-        <h1 className="banner_description">{movie?.overview}</h1>
+        <h1 className="banner_description">{truncate(movie?.overview, 150)}</h1>
+        <div className="banner-bottomFade"></div>
       </div>
     </header>
   );

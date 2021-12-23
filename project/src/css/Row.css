@@ -1,3 +1,6 @@
+.row-title {
+  color: rgb(255, 255, 255);
+}
 .row_posters {
   display: flex;
   overflow-y: hidden;
